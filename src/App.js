@@ -13,7 +13,7 @@ function App() {
   };
 
   return (
-    <div className="text-center bg-green-600">
+    <div className="text-center">
       <CartContext.Provider value={{ cart, addToCartHandler }}>
         <RouterProvider router={router}></RouterProvider>
       </CartContext.Provider>
