@@ -17,7 +17,7 @@ const Item = ({ meal, price }) => {
         <h4 className="text-lg">$ {price}</h4>
         <button
           onClick={() => addToCartHandler(meal)}
-          className="py-1 bg-lime-600 hover:bg-orange-500 rounded-md text-white text-sm"
+          className="py-2 bg-lime-600 hover:bg-orange-500 rounded-md text-white text-sm"
         >
           Add Meal
         </button>
