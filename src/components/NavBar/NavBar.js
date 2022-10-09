@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NavBar = ({ navOptions }) => {
   return (
     <ul
-      className={`bg-lime-500 z-10 md:bg-lime-600 w-3/5 md:w-1/5 md:flex absolute  md:static ease-in duration-300 ${
+      className={`bg-lime-700 text-white z-10 md:bg-lime-600 w-3/5 md:w-1/5 md:flex absolute  md:static ease-in duration-300 ${
         navOptions ? "left-0 top-0 h-full" : "left-[-240px] top-0 h-full"
       }`}
     >
