@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../App";
 
-const Item = ({ meal }) => {
+const Item = ({ meal, price }) => {
   const name = meal.strMeal.split(" ");
   const { strMealThumb } = meal;
 
@@ -13,7 +13,8 @@ const Item = ({ meal }) => {
         <img className="w-11/12 rounded-md" src={strMealThumb} alt="food" />
       </div>
       <div className="basis-3/5 h-full flex flex-col justify-between">
-        <h1>{name[0] + " " + name[1]}</h1>
+        <h1 className="text-2xl">{name[0] + " " + name[1]}</h1>
+        <h4 className="text-xl">$ {price}</h4>
         <button
           onClick={() => addToCartHandler(meal)}
           className="py-1 bg-lime-600 hover:bg-orange-500 rounded-md text-white text-sm"
