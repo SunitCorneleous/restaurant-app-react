@@ -8,7 +8,12 @@ export const router = createBrowserRouter([
     path: "/",
     element: <Main></Main>,
     children: [
-      { path: "/", element: <Home></Home> },
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: () =>
+          fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=beef"),
+      },
       { path: "/orders", element: <ReviewOrder></ReviewOrder> },
     ],
   },
