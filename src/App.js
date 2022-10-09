@@ -9,7 +9,19 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCartHandler = item => {
-    setCart([...cart, item]);
+    const exists = cart.find(meal => meal.idMeal === item.idMeal);
+
+    let newCart;
+
+    if (!exists) {
+      item["quantity"] = 1;
+      newCart = [...cart, item];
+    } else {
+      const rest = cart.filter(meal => meal.idMeal !== item.idMeal);
+      exists["quantity"] = exists["quantity"] + 1;
+      newCart = [...rest, item];
+    }
+    setCart(newCart);
   };
 
   return (
