@@ -7,8 +7,6 @@ const Item = ({ meal }) => {
 
   const { addToCartHandler } = useContext(CartContext);
 
-  // console.log(contextValue);
-
   return (
     <div className="border border-black rounded-xl p-2 flex bg-slate-300">
       <div className="basis-2/5">
