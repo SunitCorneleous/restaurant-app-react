@@ -25,7 +25,7 @@ function App() {
   };
 
   return (
-    <div className="text-center">
+    <div className="text-center App">
       <CartContext.Provider value={{ cart, addToCartHandler }}>
         <RouterProvider router={router}></RouterProvider>
       </CartContext.Provider>
